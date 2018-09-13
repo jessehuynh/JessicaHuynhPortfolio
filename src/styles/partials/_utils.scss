@@ -1,0 +1,38 @@
+$white:#FFF;
+$base:#3a3a3a;
+$light:#a7a7a7;
+$primary:#687c9f;
+$secondary:#8baeea;
+$accent:#b88faf;
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+
+@mixin breakPoint($point) {
+    @if $point == firstBreak {
+        @media (max-width:1165px) { @content;}
+    }
+    @if $point == secondBreak {
+        @media (max-width:1080px) { @content;}
+    }
+    @if $point == thirdBreak {
+        @media (max-width:940px) { @content;}
+    }
+    @if $point == fourthBreak {
+        @media (max-width:840px) {@content;}
+    }
+    @if $point == fifthBreak {
+        @media (max-width:775px) {@content;}
+    }
+    @if $point == sixthBreak {
+        @media (max-width:675px) {@content;}
+    }
+    @if $point == seventhBreak {
+        @media (max-width:450px) {@content;}
+    }
+}
