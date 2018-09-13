@@ -1,0 +1,34 @@
+header {
+    // border:1px solid red;
+    nav {
+        position: fixed;
+        width:100%;
+        background:$white;
+        padding:15px 0;
+        ul {
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: flex-end;
+            // border:1px solid red;
+            li {
+                list-style:none;
+                    a {
+                        // border:1px solid red;
+                        padding:15px;
+                    }
+            }
+        }
+    }
+    .wrapper {
+        height:30vh;
+        background:$base;
+        width:100%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding-top:5rem;
+        h4 {
+            letter-spacing:2px;
+        }
+    }    
+}

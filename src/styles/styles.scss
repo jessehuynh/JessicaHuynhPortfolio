@@ -2,6 +2,10 @@
 @import 'partials/_utils.scss';
 @import 'partials/_typography.scss';
 
+* {
+    margin:0;
+    transition:color 0.3s ease-in-out;
+}
 
 body {
     background: $white;
@@ -10,11 +14,49 @@ body {
     @include fontBase($baseFont, capitalize);
 }
 
-h1, h2, h3, h4 {
-    @include fontBase($headFont, capitalize);
-}
-
-
 @import 'partials/_header.scss';
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
+
+img {
+    width:100%;
+    display:block;
+}
+
+.wrapper {
+    display:flex;
+}
+
+h1, h2, h3, h5 {
+    @include fontBase($headFont, uppercase);
+}
+
+h1 {
+    @include fontSize(5rem, 1);
+    color:$white;
+    letter-spacing:2px;
+}
+
+h3 {
+    @include fontSize(3.4rem, 1);
+    color:$light;
+}
+
+h4 {
+    @include fontBase($baseFont, lowercase);
+    @include fontSize(2.5rem, 1.5);
+    color:$secondary;
+}
+
+h5 {
+    @include fontSize(2rem, 1.5);
+}
+
+a {
+    text-decoration: none;
+    color:$base;
+}
+
+li {
+    list-style:none;
+}
