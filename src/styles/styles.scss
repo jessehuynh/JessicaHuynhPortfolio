@@ -10,7 +10,7 @@
 body {
     background: $white;
     font-family:$baseFont;
-    @include fontSize(1.6rem, 1.5);
+    @include fontSize(1.4rem, 1.5);
     @include fontBase($baseFont, capitalize);
 }
 
@@ -27,25 +27,25 @@ img {
     display:flex;
 }
 
-h1, h2, h3, h5 {
+h1, h2, h3, h4, h5 {
     @include fontBase($headFont, uppercase);
 }
 
 h1 {
-    @include fontSize(5rem, 1);
-    color:$white;
+    @include fontSize(8rem, 1);
+    color:$base;
     letter-spacing:2px;
+    text-shadow:1px 1px 2px $light;
 }
 
 h3 {
-    @include fontSize(3.4rem, 1);
-    color:$light;
+    @include fontSize(4rem, 1);
+    color:darken($light, 10%);
 }
 
 h4 {
-    @include fontBase($baseFont, lowercase);
-    @include fontSize(2.5rem, 1.5);
-    color:$secondary;
+    @include fontSize(2.5rem, 2.5);
+    color:$base;
 }
 
 h5 {
@@ -55,6 +55,11 @@ h5 {
 a {
     text-decoration: none;
     color:$base;
+    transition:border 0.2s ease-in-out;
+    &:hover {
+        border-top:1px solid $base;
+        border-bottom:1px solid $base;
+    }
 }
 
 li {
