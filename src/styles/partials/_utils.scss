@@ -13,6 +13,61 @@ $accent:#b88faf;
     left:$left;
 }
 
+@keyframes blink {
+    0% {
+        fill:white;
+    }
+    20% {
+        fill:#DDB898;
+    }
+    50% {
+        fill:white;
+    }
+    100% {
+        fill:#DDB898;
+    }
+}
+
+@keyframes blinkLashes {
+    0% {
+        fill:none;
+    }
+    20% {
+        fill:black;
+    }
+    50% {
+        fill:none;
+    }
+    100% {
+        fill:black;
+    }
+}
+
+@keyframes pupil {
+    0% {
+        fill:black;
+    }
+    20% {
+         fill:none;
+    }
+    50% {
+        fill:black;
+    }
+    100% {
+        fill:none;
+    }
+}
+
+@keyframes smile {
+    0% {
+        fill:none;
+    }
+    100% {
+        fill:#d00000;
+        /* fill:palevioletred; */
+    }
+}
+
 @mixin breakPoint($point) {
     @if $point == firstBreak {
         @media (max-width:1165px) { @content;}
