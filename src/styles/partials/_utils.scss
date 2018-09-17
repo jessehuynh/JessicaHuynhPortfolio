@@ -18,13 +18,13 @@ $accent:#b88faf;
         fill:white;
     }
     20% {
-        fill:#DDB898;
+        fill:lighten(#e5ae89, 10%);
     }
     50% {
         fill:white;
     }
     100% {
-        fill:#DDB898;
+        fill:lighten(#e5ae89, 10%);
     }
 }
 
@@ -67,6 +67,29 @@ $accent:#b88faf;
         /* fill:palevioletred; */
     }
 }
+
+
+@keyframes wave  {
+    0% {
+        transform:rotateZ(0deg);
+        transform-origin: bottom right;
+    }
+    25% {
+        transform:rotateZ(1deg);
+        transform-origin: bottom right;
+
+    }
+    50% {
+        transform:rotateZ(0deg);
+        transform-origin: bottom right;
+    }
+    100% {
+        transform:rotateZ(1deg);
+        transform-origin: bottom right;
+    }
+} 
+
+
 
 @mixin breakPoint($point) {
     @if $point == firstBreak {

@@ -2,28 +2,6 @@ header {
     // border:1px solid red;
     // display:flex;
     position: relative;
-    nav {
-        // border-bottom:1px solid $base;
-        box-shadow:0px 1px 5px darken($light, 10%);
-        position: fixed;
-        width:100%;
-        background:$white;
-        padding:15px 0;
-        z-index:5;
-        ul {
-            display: flex;
-            flex-flow:row wrap;
-            justify-content: flex-end;
-            // border:1px solid red;
-            li {
-                list-style:none;
-                a {
-                    // border:1px solid red;
-                    padding:0.5rem 2rem;
-                }
-            }
-        }
-    }
     section {
         // border-bottom:1px solid $base;
         box-shadow:inset 0px -1px 5px darken($light, 10%);
@@ -41,8 +19,10 @@ header {
             position: relative;
             display:flex;
             justify-content: center;
+            z-index:5;
             svg {
-                top:15px;
+                align-self:center;
+                width:100%;
             }
             #blinkingLashes {
                 fill:transparent;
@@ -78,25 +58,55 @@ header {
             font-weight:400;
             color:$secondary;
         }
+        .wrapper {
+            width:75%;
+            position: fixed;    
+            top:10.5rem;
+            // border:1px solid red;
+        }
     }
 }
 
-@keyframes wave  {
-    0% {
-        transform:rotateZ(0deg);
-        transform-origin: bottom right;
+.container--cool {
+    padding:0;
+    .nav__listItem ul .nav__listItem a:hover {
+        color:$secondary;
     }
-    25% {
-        transform:rotateZ(1deg);
-        transform-origin: bottom right;
+    ul {
+        padding:0;
+    }
+    ul:nth-child(2) {
+        // border:1px solid red;
+        display:none;
+    }
+    ul:nth-child(2).show {
+        display:inline-block;
+    }
 
+}
+
+.nav__container {
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+    // border:1px solid red;
+    .nav__listItem {
+        list-style:none;
+        a {
+            padding:0.5rem 0;
+            text-decoration: none;
+        }
     }
-    50% {
-        transform:rotateZ(0deg);
-        transform-origin: bottom right;
+}
+
+
+
+.nav__container--header {
+    padding:0;
+    // display: inline-block;
+    flex-flow: column wrap;
+    .nav__listItem::after {
+        content:'.()';
+        font-size:1.2rem;
     }
-    100% {
-        transform:rotateZ(1deg);
-        transform-origin: bottom right;
-    }
-} 
+}

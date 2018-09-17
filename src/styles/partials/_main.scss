@@ -2,9 +2,10 @@ main {
     .wrapper {
         flex-flow: column wrap;
         // border:1px solid red;
+        padding: 10rem 0;
         width:75%;
         margin:0 auto;
-        padding: 10rem 0;
+
     }
 }
 
@@ -12,16 +13,17 @@ main {
     display:flex;
 }
 
-.container--skills, .container--tools {
+.container {
     .container__list {
         // border:1px solid red;
         display:flex;
         flex-flow:row wrap;
         justify-content: center;
+        align-content: center;
         width:80%;
         padding:0;
         margin:0 auto;
-        li {
+        .nav__listItem {
             // border:1px solid red; 
             margin:1rem 0;
             width:calc(100% / 5);
@@ -38,8 +40,12 @@ main {
                 color:#6e5494;
             }
             .firebase {
-                // border:1px solid red;
                 align-self:center;
+
+            }
+            #firebase, .firebase {
+                position: relative;
+                bottom:1.2rem;
             }
         }
     }
@@ -48,7 +54,7 @@ main {
     }
 }
 
-.container:nth-of-type(2):not(.container--portfolio) {
+.container:nth-child(2):not(.container--portfolio):not(.container--contact){
     background:$light;
     h3 {
         color:lighten($base, 20%);

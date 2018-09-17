@@ -11,7 +11,7 @@ body {
     background: $white;
     font-family:$baseFont;
     @include fontSize(1.4rem, 1.5);
-    @include fontBase($baseFont, capitalize);
+    @include fontBase($baseFont, none);
 }
 
 @import 'partials/_header.scss';
@@ -27,8 +27,9 @@ img {
     display:flex;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, a {
     @include fontBase($headFont, uppercase);
+    z-index:5;
 }
 
 h1 {
@@ -52,7 +53,17 @@ h5 {
     @include fontSize(2rem, 2);
 }
 
-a {
+h6 {
+    font-size:1.4rem;
+    color:$primary;
+    text-transform:lowercase;
+    &:hover {
+        color:$secondary;
+        cursor: url(../../assets/pointer.png), auto;
+    }
+}
+
+a:not(.header) {
     text-decoration: none;
     color:$base;
     transition:border 0.2s ease-in-out;
