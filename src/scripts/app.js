@@ -3,7 +3,7 @@ const app = []
 app.clickEvents = () => {
     // SMOOTH SCROLL 
     $('a').smoothScroll({
-        offset:25,
+        offset:50,
     });
 
     // HEADER NAV
