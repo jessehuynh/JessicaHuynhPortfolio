@@ -59,7 +59,8 @@ h6 {
     text-transform:lowercase;
     &:hover {
         color:$secondary;
-        cursor: url(../../assets/pointer.png), auto;
+        // cursor: url(../../assets/pointer.png), auto;
+        cursor:pointer;
     }
 }
 

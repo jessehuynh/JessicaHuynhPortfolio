@@ -2,7 +2,7 @@ footer {
     display:flex;
     flex-direction:column;
     justify-content: center;
-    background:$base;
+    // background:$base;
     padding:2rem 0;
     // border:1px solid blue;
     a:not(#close) {
@@ -16,6 +16,9 @@ footer {
     section {
         width:75%;
         margin:0 auto;
+        h6 {
+            text-align: center;
+        }
     }
     .nav__container {
         text-align: center;
@@ -39,6 +42,7 @@ footer {
     opacity:0;
     background:$white;
     position: relative;
+    width:50%;
 }
 .form__container {
     // border:1px solid hotpink;
@@ -103,9 +107,10 @@ footer {
     opacity:1;
     position: fixed;
     left:50%;
-    top:35%;
+    top:31.5%;
     transform:translateX(-50%) translateY(-35%);
     z-index:50;
+    background:rgba(255,255,255,0.9);
 }
 
 #close {

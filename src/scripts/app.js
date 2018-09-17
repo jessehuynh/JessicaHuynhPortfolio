@@ -1,10 +1,13 @@
 const app = []
 
-app.events = () => {
+app.clickEvents = () => {
     // SMOOTH SCROLL 
+    $('a').smoothScroll({
+        offset:25,
+    });
+
     // HEADER NAV
     $('.nav__listItem--cool h6').on('click', function(){
-        console.log('hi')
         $(this).next().toggleClass('show');
     }) 
     // CONTACT FORM
@@ -20,7 +23,7 @@ app.events = () => {
 }
 
 app.init = function () {
-   app.events()
+   app.clickEvents()
 }
 
 $(function(){

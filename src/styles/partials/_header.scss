@@ -19,7 +19,6 @@ header {
             position: relative;
             display:flex;
             justify-content: center;
-            z-index:5;
             svg {
                 align-self:center;
                 width:100%;
@@ -62,6 +61,7 @@ header {
             width:75%;
             position: fixed;    
             top:10.5rem;
+            z-index:4;
             // border:1px solid red;
         }
     }
@@ -69,6 +69,7 @@ header {
 
 .container--cool {
     padding:0;
+    background:rgba(255,255,255,0.3);
     .nav__listItem ul .nav__listItem a:hover {
         color:$secondary;
     }
