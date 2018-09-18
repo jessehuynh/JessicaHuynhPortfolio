@@ -14,6 +14,11 @@ main {
         @include breakPoint(thirdBreak) {
             width:75%;
         }
+        @include breakPoint(fifthBreak) {
+            // border:1px solid red;
+            width:100%;
+            padding:0;
+        }
     }
 }
 
@@ -44,6 +49,12 @@ main {
             flex-direction: column;
             i {
                 font-size:9rem;
+                @include breakPoint(fourthBreak) {
+                    font-size:5rem;
+                }
+                @include breakPoint(sixthBreak) {
+                    font-size:3.5rem;
+                }
             }
             .fa-mobile-alt {
                 color:lighten($base, 20%);
@@ -58,11 +69,25 @@ main {
             #firebase, .firebase {
                 position: relative;
                 bottom:1.2rem;
+                @include breakPoint(sixthBreak) {
+                    bottom:0.6rem;
+                }
+            }
+            h5 {
+                @include breakPoint(seventhBreak) {
+                    display:none;
+                } 
             }
         }
     }
     .firebase {
         width:75px;
+        @include breakPoint(fourthBreak) {
+            width:45.5px;
+        }
+        @include breakPoint(sixthBreak){
+            width:30px;
+        }
     }
     .card__text {
         // border:1px solid black;
@@ -70,10 +95,6 @@ main {
         position: relative;
         top:2.5rem;
         right:3rem;
-        &:nth-of-type(even) {
-            left:3rem;
-            // border:1px solid red;
-        }
         @include breakPoint(secondBreak) {
             width:50%;
         }
@@ -81,6 +102,23 @@ main {
             width:70%;
             position: static;
             text-align: left;
+        }
+        @include breakPoint(fourthBreak) {
+            width:85%;
+        }
+        @include breakPoint(fifthBreak) {
+            background:rgba(255,255,255,0.7);
+            width:100%;
+            position: absolute;
+            bottom:0;
+            right:0;
+            top:inherit;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            p:not(.card__text__p) {
+                display:none;
+            }
         }
         .card__line {
             position: absolute;
@@ -92,6 +130,12 @@ main {
                 width:75px;
                 left:-10rem;
             }
+            @include breakPoint(fourthBreak) {
+                left:-5rem;
+            }
+            @include breakPoint(fifthBreak) {
+                display:none;
+            }
         }
         .card__line--odd{
             left:40rem;
@@ -100,6 +144,9 @@ main {
             }
             @include breakPoint(thirdBreak) {
                 left:-10rem;
+            }
+            @include breakPoint(fourthBreak) {
+                left:-5rem;
             }
         }
         .card__list {
@@ -110,6 +157,9 @@ main {
             // border:1px solid red;
             @include breakPoint(thirdBreak) {
                 justify-content: flex-start;
+            }
+            @include breakPoint(fifthBreak) {
+                display:none;
             }
             li {
                 padding:0 0 0 2rem;
@@ -138,6 +188,9 @@ main {
         flex-flow: row wrap;
         justify-content: space-around;
     }
+    @include breakPoint(fifthBreak) {
+        margin:0;
+    }
     .container__image {
         // border:1px solid red;
         width:50rem;
@@ -155,6 +208,9 @@ main {
     .card__text--even {
         // border:1px solid red;
         left:3rem;
+        @include breakPoint(fifthBreak) {
+            left:0;
+        }
         .card__line--even {
             right:40rem;
             // border:1px solid red;
@@ -185,12 +241,24 @@ main {
 #about {
     z-index:-5;
     background:$light;
+    .container--about {
+        @include breakPoint(fourthBreak) {
+            flex-direction:column;
+        }
+
+    }
     h3 {
         margin-bottom:5rem;
+        @include breakPoint(fifthBreak) {
+            margin:0;
+        }
     }
     h4 {
         margin-top:1rem;
         line-height:1.5;
+        @include breakPoint(fifthBreak) {
+            margin:0;
+        }
     }
     h5 {
         line-height:0;
@@ -201,14 +269,26 @@ main {
         // border:1px solid red;
         width:50rem;
         height:50rem;
-        overflow:hidden;
+        // margin:0 auto;
         box-shadow: -2rem 2rem 0 darken($light, 20%);
+        overflow: hidden;
         @include breakPoint(thirdBreak) {
             height:40rem;
+        }
+        @include breakPoint(fourthBreak) {
+            height:50rem;
+            margin:0 auto;
+            width:100%;
+        }
+        @include breakPoint(fifthBreak) {
+            box-shadow:none;
         }
         img {
             position: relative;
             bottom:10rem;
+            @include breakPoint(fourthBreak) {
+                bottom:13rem;
+            }
         }
     }
     .card__text--about {
@@ -224,12 +304,31 @@ main {
             position: relative;
             width:60%;
         }
+        @include breakPoint(fourthBreak) {
+            width:85%;
+            margin:0 auto;
+            left:0;
+        }
+        @include breakPoint(fifthBreak) {
+            flex-direction: column;
+            justify-content: center;
+            width:100%;
+            height:50%;
+        }
+        p {
+            padding:0 2.5rem;
+        }
     }
     .card__line--about {
         width:225px;
         left:-5rem;
         @include breakPoint(thirdBreak) {
             transform:rotate(0deg);
+        }
+        @include breakPoint(fourthBreak) {
+            transform: rotate(90deg);
+            left:-7rem;
+            width:90px;
         }
     }
 }

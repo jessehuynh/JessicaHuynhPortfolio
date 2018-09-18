@@ -102,13 +102,13 @@ $accent:#b88faf;
         @media (max-width:1002px) { @content;}
     }
     @if $point == fourthBreak {
-        @media (max-width:840px) {@content;}
+        @media (max-width:785px) {@content;}
     }
     @if $point == fifthBreak {
-        @media (max-width:775px) {@content;}
+        @media (max-width:635px) {@content;}
     }
     @if $point == sixthBreak {
-        @media (max-width:675px) {@content;}
+        @media (max-width:500px) {@content;}
     }
     @if $point == seventhBreak {
         @media (max-width:450px) {@content;}

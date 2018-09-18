@@ -19,6 +19,9 @@ header {
             position: relative;
             display:flex;
             justify-content: center;
+            @include breakPoint(fifthBreak) {
+                width:70%;
+            }
             svg {
                 align-self:center;
                 width:100%;

@@ -37,20 +37,38 @@ h1 {
     color:$base;
     letter-spacing:2px;
     text-shadow:1px 1px 2px $light;
+    @include breakPoint(sixthBreak) {
+        font-size:6rem;
+    }
+    @include breakPoint(seventhBreak) {
+        font-size:5rem;
+    }
 }
 
 h3 {
     @include fontSize(4rem, 1);
     color:darken($light, 10%);
+    @include breakPoint(fifthBreak) {
+        line-height:2;
+    }
+    @include breakPoint(seventhBreak) {
+        font-size:3rem;
+    }
 }
 
 h4 {
     @include fontSize(2.5rem, 2.5);
     color:$base;
+    @include breakPoint(seventhBreak) {
+        font-size:1.9rem;
+    }
 }
 
 h5 {
     @include fontSize(2rem, 2);
+    @include breakPoint(fifthBreak) {
+        font-size:1.6rem;
+    }
 }
 
 h6 {
