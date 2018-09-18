@@ -79,7 +79,8 @@ main {
         }
         @include breakPoint(thirdBreak) {
             width:70%;
-            right:5rem;
+            position: static;
+            text-align: left;
         }
         .card__line {
             position: absolute;
@@ -88,6 +89,8 @@ main {
             border-bottom:2px solid $base;
             @include breakPoint(thirdBreak) {
                 transform:rotate(90deg);
+                width:75px;
+                left:-10rem;
             }
         }
         .card__line--odd{
@@ -96,7 +99,7 @@ main {
                 left:38rem;
             }
             @include breakPoint(thirdBreak) {
-                left:45rem;
+                left:-10rem;
             }
         }
         .card__list {
@@ -104,8 +107,15 @@ main {
             display:flex;
             justify-content: flex-end;
             padding:0;
+            // border:1px solid red;
+            @include breakPoint(thirdBreak) {
+                justify-content: flex-start;
+            }
             li {
                 padding:0 0 0 2rem;
+                @include breakPoint(thirdBreak) {
+                    padding:0 2rem 0 0;
+                }
             }
         }
     }
@@ -125,7 +135,8 @@ main {
     text-align: right;
     margin:3rem auto;
     @include breakPoint(thirdBreak) {
-        flex-flow: row-reverse wrap;
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
     .container__image {
         // border:1px solid red;
@@ -146,9 +157,13 @@ main {
         left:3rem;
         .card__line--even {
             right:40rem;
+            // border:1px solid red;
         }
         .card__list {
             justify-content: flex-start;
+            @include breakPoint(thirdBreak) {
+                justify-content: flex-start;
+            }
             li {
                 padding:0 2rem 0 0;
             }
@@ -188,6 +203,9 @@ main {
         height:50rem;
         overflow:hidden;
         box-shadow: -2rem 2rem 0 darken($light, 20%);
+        @include breakPoint(thirdBreak) {
+            height:40rem;
+        }
         img {
             position: relative;
             bottom:10rem;
@@ -197,13 +215,21 @@ main {
         // border:1px solid purple;
         width:45%;
         left:3rem;
-        top:10rem;
+        height:70%;
         p {
             margin-top:2.5rem;
+        }
+        @include breakPoint(thirdBreak) {
+            text-align: left;
+            position: relative;
+            width:60%;
         }
     }
     .card__line--about {
         width:225px;
         left:-5rem;
+        @include breakPoint(thirdBreak) {
+            transform:rotate(0deg);
+        }
     }
 }
