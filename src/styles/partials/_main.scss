@@ -5,7 +5,15 @@ main {
         padding: 10rem 0;
         width:75%;
         margin:0 auto;
-
+        @include breakPoint(firstBreak) {
+            width:85%;
+        }
+        @include breakPoint(secondBreak) {
+            width:90%;
+        }
+        @include breakPoint(thirdBreak) {
+            width:75%;
+        }
     }
 }
 
@@ -20,9 +28,13 @@ main {
         flex-flow:row wrap;
         justify-content: center;
         align-content: center;
-        width:80%;
+        width:90%;
         padding:0;
         margin:0 auto;
+        @include breakPoint(firstBreak) {
+            // border:1px solid black;
+            width:100%;
+        }
         .nav__listItem {
             // border:1px solid red; 
             margin:1rem 0;
@@ -56,20 +68,36 @@ main {
         // border:1px solid black;
         width:45%;
         position: relative;
-        top:5rem;
+        top:2.5rem;
         right:3rem;
         &:nth-of-type(even) {
             left:3rem;
-            border:1px solid red;
+            // border:1px solid red;
+        }
+        @include breakPoint(secondBreak) {
+            width:50%;
+        }
+        @include breakPoint(thirdBreak) {
+            width:70%;
+            right:5rem;
         }
         .card__line {
             position: absolute;
             width:150px;
             background:$base;
             border-bottom:2px solid $base;
+            @include breakPoint(thirdBreak) {
+                transform:rotate(90deg);
+            }
         }
         .card__line--odd{
             left:40rem;
+            @include breakPoint(firstBreak) {
+                left:38rem;
+            }
+            @include breakPoint(thirdBreak) {
+                left:45rem;
+            }
         }
         .card__list {
             margin:2rem auto;
@@ -96,10 +124,21 @@ main {
     justify-content: flex-start;
     text-align: right;
     margin:3rem auto;
+    @include breakPoint(thirdBreak) {
+        flex-flow: row-reverse wrap;
+    }
     .container__image {
-        background:darken($light, 20%);
-        width:400px;
-        height:300px;
+        // border:1px solid red;
+        width:50rem;
+        height:auto;
+        box-shadow:1px 1px 1rem darken($light, 5%);
+        transition:box-shadow 0.2s ease-in-out;
+        &:hover {
+            box-shadow:1px 1px 1.5rem darken($light, 20%);
+        }
+        @include breakPoint(thirdBreak) {
+            width:100%;
+        }
     }
     
     .card__text--even {

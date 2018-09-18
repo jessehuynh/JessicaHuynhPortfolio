@@ -77,3 +77,7 @@ a:not(.header) {
 li {
     list-style:none;
 }
+
+section:not(.container--last) {
+    box-shadow:inset 0px -1px 5px darken($light, 5%);
+}

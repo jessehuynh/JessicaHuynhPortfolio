@@ -93,13 +93,13 @@ $accent:#b88faf;
 
 @mixin breakPoint($point) {
     @if $point == firstBreak {
-        @media (max-width:1165px) { @content;}
+        @media (max-width:1270px) { @content;}
     }
     @if $point == secondBreak {
-        @media (max-width:1080px) { @content;}
+        @media (max-width:1120px) { @content;}
     }
     @if $point == thirdBreak {
-        @media (max-width:940px) { @content;}
+        @media (max-width:1002px) { @content;}
     }
     @if $point == fourthBreak {
         @media (max-width:840px) {@content;}

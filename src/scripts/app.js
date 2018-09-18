@@ -10,6 +10,7 @@ app.clickEvents = () => {
     $('.nav__listItem--cool h6').on('click', function(){
         $(this).next().toggleClass('show');
     }) 
+
     // CONTACT FORM
     $('.fa-envelope-square, .nav__listItem--contact').on('click', function (e) {
         e.preventDefault();
@@ -28,4 +29,5 @@ app.init = function () {
 
 $(function(){
     app.init();
+    AOS.init();
 });

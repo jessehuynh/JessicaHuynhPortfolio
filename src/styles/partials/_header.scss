@@ -4,7 +4,7 @@ header {
     position: relative;
     section {
         // border-bottom:1px solid $base;
-        box-shadow:inset 0px -1px 5px darken($light, 10%);
+        // box-shadow:inset 0px -1px 5px darken($light, 10%);
         display: flex;
         flex-direction:column;
         justify-content: center;
@@ -63,6 +63,12 @@ header {
             top:8.25rem;
             z-index:4;
             // border:1px solid red;
+            @include breakPoint(firstBreak) {
+            width:85%;
+            }
+            @include breakPoint(secondBreak) {
+                width:90%;
+            }
         }
     }
 }
