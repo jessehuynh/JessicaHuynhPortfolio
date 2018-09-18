@@ -29,7 +29,6 @@ img {
 
 h1, h2, h3, h4, h5, a {
     @include fontBase($headFont, uppercase);
-    z-index:5;
 }
 
 h1 {
@@ -72,6 +71,8 @@ h5 {
 }
 
 h6 {
+    display:inline;
+    // border:1px solid red;
     font-size:1.4rem;
     color:$primary;
     text-transform:lowercase;
@@ -95,6 +96,7 @@ a:not(.header) {
 li {
     list-style:none;
 }
+
 
 section:not(.container--last) {
     box-shadow:inset 0px -1px 5px darken($light, 5%);

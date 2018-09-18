@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="public/styles/style.css">
     <title>jesse | web developer</title>
 </head>
@@ -19,12 +21,22 @@
                 <nav class="container container--cool">
                     <ul>
                         <li class="nav__listItem nav__listItem--cool">
-                            <h6>&lt;jesseh.codes/&gt;</h6>
+                            <h6>MENU/</h6>
                             <ul class="nav__container nav__container--header">
-                                <li class="nav__listItem"><a class="header" href="index.html">Refresh</a></li>
-                                <li class="nav__listItem"><a class="header" href="#portfolio">Portfolio</a></li>
-                                <li class="nav__listItem"><a class="header" href="#about">About</a></li>
-                                <li class="nav__listItem nav__listItem--contact"><a class="header" href="#contact">Contact</a></li>
+                                <li class="nav__listItem nav__listItem--refresh"><a class="header" href="index.html">Refresh</a></li>
+                                <li class="nav__listItem nav__listItem--portfolio"><a class="header" href="#portfolio">Portfolio</a></li>
+                                <li class="nav__listItem nav__listItem--about"><a class="header" href="#about">About</a></li>
+                                <li class="nav__listItem nav__listItem--contact">
+                                    <a class="header" href="#contact">Contact</a>
+                                    <ul class="nav__container--sub">
+                                        <li class="nav__listItem nav__listItem--phone">
+                                            <a class="header" href="tel:9022192419">Call</a>
+                                        </li>
+                                        <li class="nav__listItem nav__listItem--email">
+                                            <a class="header" href="mailto:jesseca.melise@live.com">Email</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -217,6 +229,10 @@
                         <h5 id="firebase">Firebase</h5>
                     </li>
                     <li class="nav__listItem">
+                        <i class="devicon-illustrator-plain colored"></i>
+                        <h5>Illustrator</h5>
+                    </li>
+                    <li class="nav__listItem">
                         <i class="devicon-gulp-plain colored"></i>
                         <h5>Gulp</h5>
                     </li>
@@ -224,6 +240,7 @@
                         <i class="devicon-sass-original colored"></i>
                         <h5>Sass</h5>
                     </li>
+                  
                     <li class="nav__listItem">
                         <i class="devicon-css3-plain colored"></i>
                         <h5>CSS3</h5>
@@ -237,6 +254,10 @@
                         <h5>jQuery</h5>
                     </li>
                     <li class="nav__listItem">
+                        <i class="devicon-photoshop-plain colored"></i>
+                        <h5>Photoshop</h5>
+                    </li>
+                    <li class="nav__listItem">
                         <i class="fab fa-github-alt"></i>
                         <h5>Github</h5>
                     </li>
@@ -244,29 +265,7 @@
                         <i class="fas fa-mobile-alt"></i>
                         <h5>Responsive</h5>
                     </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- TOOLS SECTION -->
-        <section class="container container--tools">
-            <div class="wrapper">
-                <h3>Tools</h3>
-                <ul class="container__list">
-                    <li class="nav__listItem">
-                        <i class="fas fa-terminal"></i>
-                        <h5>Terminal</h5> 
-
-                    </li>
-                    <li class="nav__listItem">
-                        <i class="devicon-illustrator-plain colored"></i>
-                        <h5>Illustrator</h5>
-
-                    </li>
-                    <li class="nav__listItem">
-                        <i class="devicon-visualstudio-plain colored"></i>
-                        <h5>VS Code</h5>
-                    </li>
+                  
                 </ul>
             </div>
         </section>
@@ -283,7 +282,7 @@
                     <figcaption data-aos="flip-left" class="card__text">
                         <div class="card__line card__line--odd"></div>
                         <h4>One Minute Hair Consultation</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, qui iure! Dignissimos, magni minus quisquam ipsam accusamus et similique tempore inventore voluptate labore aperiam ipsa harum excepturi consequuntur eligendi. Labore?</p>
+                        <p>If you have a minute, you have the time for this hair consultation! This Javascript / jQuery application generates a suitable hairstyle based off of a list of generalized features and the user's selections.</p>
                         <ul class="card__list">
                             <li>HTML</li>
                             <li>CSS & Sass</li>
@@ -303,7 +302,7 @@
                     <figcaption data-aos="flip-right" class="card__text card__text--even">
                         <div class="card__line card__line--even"></div>
                         <h4>StumbleGrumble</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, qui iure! Dignissimos, magni minus quisquam ipsam accusamus et similique tempore inventore voluptate labore aperiam ipsa harum excepturi consequuntur eligendi. Labore?</p>
+                        <p>Stumped on where to eat? This StumbleGrumble Restaurant Finder app uses a few google APIs to generate as list of food options near you. Simply, allow us to use your location, or if you prefer, manually enter your address!</p>
                         <ul class="card__list">
                             <li>HTML</li>
                             <li>CSS & Sass</li>
@@ -323,9 +322,7 @@
                     <figcaption data-aos="flip-left" class="card__text">
                         <div class="card__line card__line--odd"></div>
                         <h4>e-Card Maker</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, qui iure! Dignissimos, magni minus quisquam
-                            ipsam accusamus et similique tempore inventore voluptate labore aperiam ipsa harum excepturi consequuntur
-                            eligendi. Labore?</p>
+                        <p>This React app uses a combination of HTML & CSS and Javascript to allow user's to create their own e-Cards with custom illustrations made by me!</p>
                         <ul class="card__list">
                             <li>HTML</li>
                             <li>CSS & Sass</li>
@@ -345,7 +342,9 @@
                     <figcaption data-aos="flip-right" class="card__text card__text--even">
                         <div class="card__line card__line--even"></div>
                         <h4>Sheridan Eye Clinic</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, qui iure! Dignissimos, magni minus quisquam ipsam accusamus et similique tempore inventore voluptate labore aperiam ipsa harum excepturi consequuntur eligendi. Labore?</p>
+                        <p>
+                            
+                        </p>
                         <ul class="card__list">
                             <li>HTML</li>
                             <li>CSS & Sass</li>
@@ -381,7 +380,7 @@
                         <figure class="container__image container__image--about">
                             <img src="./assets/2018-summer-bootcamp-jessica-huynh-4.jpg" alt="Headshot of Jesse Huynh. Photo By Pam Lau">
                         </figure>
-                        <figcaption data-aos="zoom-in-left" class="card__text card__text--about">
+                        <figcaption class="card__text card__text--about">
                             <div class="card__line card__line--about"></div>
                             <h4>Jesse Huynh</h4>
                             <h5>Web Developer</h5>
@@ -432,27 +431,20 @@
                 </ul>
         </section> -->
         <section class="container--last">
-            <h6>
-                © Jesse Huynh 2018
-            </h6>
+            <div class="wrapper">
+                <h6>
+                    © Jesse Huynh 2018
+                </h6>
+
+            </div>
         </section>
-        <section class="container container--contact">
-            <h3>Send a message</h3>
-            <form action="" class="form__container">
-                <div class="wrapper">
-                    <label for="name" class="form__label">Full Name</label>
-                    <input type="text" class="form__input form__input--name" name="name" id="name">
-                    <label for="number" class="form__label">Phone #</label>
-                    <input type="text" class="form__input form__input--number" name="number" id="number">
-                    <label for="email" class="form__label">Email Address</label>
-                    <input type="text" class="form__input form__input--email" name="email" id="email">
-                </div>
-                <label for="message" class="form__label form__label--message">Message Body</label>
-                <textarea name="message" class="form__input form__input--textArea" id="message" cols="30" rows="5"></textarea>
-                <input type="submit" class="form__input form__input--submit" value="Send Message">
-            </form>
-            <a href="#" id="close">Close <i class="fas fa-window-close"></i></a>
-        </section>
+        <div id="bagel-container" class="hide">
+            <div class="bagels bagels1"><img src="./assets/bens-bagels.png" alt=""></div>
+            <div class="bagels bagels2"><img src="./assets/bens-bagels.png" alt=""></div>
+            <div class="bagels bagels3"><img src="./assets/bens-bagels.png" alt=""></div>
+            <div class="bagels bagels4"><img src="./assets/bens-bagels.png" alt=""></div>
+            <div class="bagels bagels5"><img src="./assets/bens-bagels.png" alt=""></div>
+        </div>
     </footer>
     <!-- FOOTER ENDS -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>

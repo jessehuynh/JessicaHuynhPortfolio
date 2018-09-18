@@ -2,7 +2,7 @@ main {
     .wrapper {
         flex-flow: column wrap;
         // border:1px solid red;
-        padding: 10rem 0;
+        padding: 5rem 0;
         width:75%;
         margin:0 auto;
         @include breakPoint(firstBreak) {
@@ -43,7 +43,7 @@ main {
         .nav__listItem {
             // border:1px solid red; 
             margin:1rem 0;
-            width:calc(100% / 5);
+            width:calc(100% / 6);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -74,6 +74,9 @@ main {
                 }
             }
             h5 {
+                @include breakPoint(fourthBreak) {
+                    font-size:1.7rem;
+                }
                 @include breakPoint(seventhBreak) {
                     display:none;
                 } 
@@ -258,6 +261,7 @@ main {
         line-height:1.5;
         @include breakPoint(fifthBreak) {
             margin:0;
+            text-align: right;
         }
     }
     h5 {
@@ -267,9 +271,9 @@ main {
     }
     .container__image--about {
         // border:1px solid red;
-        width:50rem;
-        height:50rem;
-        // margin:0 auto;
+        width:40rem;
+        height:40rem;
+        margin:0 auto;
         box-shadow: -2rem 2rem 0 darken($light, 20%);
         overflow: hidden;
         @include breakPoint(thirdBreak) {
@@ -277,11 +281,12 @@ main {
         }
         @include breakPoint(fourthBreak) {
             height:50rem;
-            margin:0 auto;
             width:100%;
         }
         @include breakPoint(fifthBreak) {
             box-shadow:none;
+            height:auto;
+            overflow:inherit;
         }
         img {
             position: relative;
@@ -289,20 +294,30 @@ main {
             @include breakPoint(fourthBreak) {
                 bottom:13rem;
             }
+            @include breakPoint(fifthBreak) {
+                bottom:0;
+            }
         }
     }
     .card__text--about {
         // border:1px solid purple;
         width:45%;
-        left:3rem;
+        top:5rem;
+        left:-6rem;
         height:70%;
+        h4, h5 {
+            padding:0 2.5rem;
+        }
         p {
             margin-top:2.5rem;
+            line-height:1.75;
+            padding:0 2.5rem;
         }
         @include breakPoint(thirdBreak) {
             text-align: left;
             position: relative;
             width:60%;
+            left:0;
         }
         @include breakPoint(fourthBreak) {
             width:85%;
@@ -314,9 +329,7 @@ main {
             justify-content: center;
             width:100%;
             height:50%;
-        }
-        p {
-            padding:0 2.5rem;
+            top:0;
         }
     }
     .card__line--about {

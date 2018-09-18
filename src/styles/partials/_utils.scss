@@ -89,6 +89,41 @@ $accent:#b88faf;
     }
 } 
 
+@keyframes flash {
+    0% {
+        color:transparent;
+    }
+    10% {
+        color:$primary;
+    }
+    25% {
+        color:transparent;
+    }
+    50% {
+        color:$primary;
+    }
+    75% {
+        color:transparent;
+    }
+    100%{
+        color:$primary;
+    }
+}
+
+@keyframes falling-bagels {
+            0% {
+                top: -500px;
+            }
+            10%, 30%, 50%, 70%, 90% {
+                margin-left: 10px;
+            }
+            20%, 40%, 60%, 80% {
+                margin-left: 100px;
+            }
+            100% {
+                top: 100%;
+            }
+        }
 
 
 @mixin breakPoint($point) {
