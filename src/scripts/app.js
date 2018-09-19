@@ -55,7 +55,7 @@ app.clickEvents = () => {
         menuTab.toggle(); 
         setTimeout(() => {
             menuTab.hide('slow')
-        }, 5000)
+        }, 7000)
     }) 
     $('.nav__listItem--contact').on('mouseover', function() {
         $('.nav__container--sub').show('fast')

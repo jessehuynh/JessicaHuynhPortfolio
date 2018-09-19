@@ -245,7 +245,7 @@ main {
     z-index:-5;
     background:$light;
     .container--about {
-        @include breakPoint(fourthBreak) {
+        @include breakPoint(thirdBreak) {
             flex-direction:column;
         }
 
@@ -277,7 +277,9 @@ main {
         box-shadow: -2rem 2rem 0 darken($light, 20%);
         overflow: hidden;
         @include breakPoint(thirdBreak) {
-            height:40rem;
+            height:70rem;
+            // width:40rem;
+            width:100%;
         }
         @include breakPoint(fourthBreak) {
             height:50rem;
@@ -301,34 +303,39 @@ main {
     }
     .card__text--about {
         // border:1px solid purple;
-        width:45%;
-        top:5rem;
+        width:50%;
+        top:2.5rem;
         left:-6rem;
-        height:70%;
+        height:inherit;
+        padding-bottom:2rem;
         h4, h5 {
             padding:0 2.5rem;
         }
-        p {
+        .card__text__p {
             margin-top:2.5rem;
             line-height:1.75;
             padding:0 2.5rem;
+            text-align: left;
+            width:100%;
+        }
+        @include breakPoint(firstBreak) {
+            left:-2rem;
         }
         @include breakPoint(thirdBreak) {
             text-align: left;
             position: relative;
-            width:60%;
+            width:80%;
             left:0;
+            margin:0 auto;
         }
         @include breakPoint(fourthBreak) {
             width:85%;
-            margin:0 auto;
             left:0;
         }
         @include breakPoint(fifthBreak) {
             flex-direction: column;
             justify-content: center;
             width:100%;
-            height:50%;
             top:0;
         }
     }
@@ -336,12 +343,22 @@ main {
         width:225px;
         left:-5rem;
         @include breakPoint(thirdBreak) {
-            transform:rotate(0deg);
-        }
-        @include breakPoint(fourthBreak) {
-            transform: rotate(90deg);
             left:-7rem;
             width:90px;
         }
     }
+}
+
+.container--portfolio:nth-of-type(2) .card__text .team {
+    // border:1px solid red;
+    @include fontBase($baseFont, capitalize);
+    padding:0;
+    color:$primary;
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+}
+
+.container--skills {
+    padding-bottom:2rem;
 }

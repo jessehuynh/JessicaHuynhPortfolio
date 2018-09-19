@@ -12,6 +12,7 @@ body {
     font-family:$baseFont;
     @include fontSize(1.4rem, 1.5);
     @include fontBase($baseFont, none);
+    letter-spacing:0.2px;
 }
 
 @import 'partials/_header.scss';
@@ -65,6 +66,9 @@ h4 {
 
 h5 {
     @include fontSize(2rem, 2);
+    @include breakPoint(firstBreak) {
+        font-size:1.8rem;
+    }
     @include breakPoint(fifthBreak) {
         font-size:1.6rem;
     }
