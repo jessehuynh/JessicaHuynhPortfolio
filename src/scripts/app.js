@@ -46,7 +46,7 @@ app.styles = () => {
     $('.nav__container--header .nav__listItem').addClass('animated bounceInDown')
     setTimeout(() => {
         menuTab.hide('slow')
-    }, 3000)
+    }, 5000)
 }
 
 app.clickEvents = () => {
@@ -55,10 +55,11 @@ app.clickEvents = () => {
         menuTab.toggle(); 
         setTimeout(() => {
             menuTab.hide('slow')
-        }, 7000)
+        }, 15000)
     }) 
     $('.nav__listItem--contact').on('mouseover', function() {
         $('.nav__container--sub').show('fast')
+        
     })
 }
 

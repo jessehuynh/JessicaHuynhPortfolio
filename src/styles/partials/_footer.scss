@@ -1,21 +1,11 @@
 footer {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    // background:$base;
     padding:2rem 0;
     // border:1px solid blue;
-    a:not(#close) {
-        font-size:9rem;
-        color:$white;
-        &:hover {
-            border:none;
-            color:$secondary;
-        }
-    }
     .wrapper {
         width:75%;
         margin:0 auto;
+        justify-content: space-between;
+        align-items:center;
         // border:1px solid red;
          @include breakPoint(firstBreak) {
             width:85%;
@@ -28,6 +18,7 @@ footer {
         }
         @include breakPoint(fifthBreak) {
             // border:1px solid red;
+            flex-direction: column;
             width:100%;
             padding:0;
         }
@@ -39,7 +30,7 @@ footer {
             text-align: center;
         }
     }
-    .nav__container {
+    .nav__container:not(.nav__container--fixed) {
         text-align: center;
         padding:0;
         margin:4rem 0;
@@ -51,6 +42,25 @@ footer {
             font-size:2rem;
             // border:1px solid red;
             line-height:0;
+        }
+    }
+    .container--last .card__list {
+        // border:1px solid red;
+        display:flex;
+        @include breakPoint(fifthBreak) {
+            flex-direction: column;
+            text-align: center;
+            padding:0;
+        }
+        .nav__listItem:nth-of-type(2) {
+            padding-left:3rem;
+            // border:1px solid red;
+            @include breakPoint(fifthBreak) {
+                padding:0;
+            }
+        }
+        a {
+            padding:0.5rem 0;
         }
     }
 }

@@ -66,6 +66,9 @@ header {
             top:8.25rem;
             z-index:4;
             // border:1px solid red;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
             @include breakPoint(firstBreak) {
             width:85%;
             }
@@ -78,6 +81,9 @@ header {
             @include breakPoint(fifthBreak) {
                 width:100%;
             }
+            @include breakPoint(seventhBreak) {
+                align-items: flex-start;
+            }
         }
     }
 }
@@ -85,18 +91,21 @@ header {
 .container--cool {
     padding:0;
     background:rgba(247,247,247,0.8);
-    .nav__listItem a:hover {
-        color:$secondary;
+    .nav__listItem {
+        a:hover {
+            color:$secondary;
+        }
     }
     .nav__listItem--cool {
         // border:3px solid pink;
         display:flex;
+        align-items: baseline;
+        @include breakPoint(seventhBreak) {
+            flex-direction: column;
+        }
     }
     ul {
         padding:0;
-    }
-    ul:nth-child(2) {
-        // border:1px solid red;
     }
     .nav__listItem--portfolio {
         animation-delay:0.15s;
@@ -104,13 +113,12 @@ header {
     .nav__listItem--about {
         animation-delay:0.30s;
     }
-    .nav__listItem--contact {
+    .nav__listItem--phone {
         animation-delay: 0.45s;
     }
-    ul:nth-child(2).show {
-        display:inline-block;
+    .nav__listItem--email {
+        animation-delay: 0.6s;
     }
-
 }
 
 .nav__container {
@@ -123,6 +131,8 @@ header {
         a {
             padding:1rem;
             text-decoration: none;
+            @include breakPoint(seventhBreak) {}
+            padding-left:0;
         }
     }
 }
@@ -132,4 +142,32 @@ header {
     // display: inline-block;
     flex-direction: row;
     // border:1px solid red;
+    @include breakPoint(seventhBreak) {
+        flex-direction: column;
+    }
+}
+
+.nav__container--fixed{
+    margin:0;
+    padding:0;
+    background:rgba(255,255,255,0.7);
+    .nav__listItem {
+        width:min-content;
+        text-align: right;
+        margin:0;
+        padding:0;
+        // border:1px solid red;
+        display: flex;
+        a {
+            padding:0 0 0 1rem;
+            color:$primary;
+            &:hover, &:active {
+            border:none;
+            color:$secondary;
+        }
+        }
+        i {
+            font-size:2.5rem;
+        }
+    }
 }
