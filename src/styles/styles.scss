@@ -89,7 +89,7 @@ h6 {
 
 a:not(.header) {
     text-decoration: none;
-    color:$base;
+    color:$primary;
     transition:border 0.2s ease-in-out;
     &:hover {
         border-top:1px solid $base;
