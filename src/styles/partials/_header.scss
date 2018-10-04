@@ -34,7 +34,6 @@ header {
                 animation:wave 2s infinite;
             }
             #eyeWhite {
-                // fill:black;
                 animation:blink 2s infinite;
                 animation-fill-mode: blink;
             }
@@ -163,7 +162,7 @@ header {
             &:hover, &:active {
             border:none;
             color:$secondary;
-        }
+            }
         }
         i {
             font-size:2.5rem;

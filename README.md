@@ -1,10 +1,4 @@
-# Static Boilerplate
+# My First Portfolio
 
-### Getting started
+This is the portfolio I created near the end of my full web immersive program at HackerYou in September 2018. The SVG in the header hero is a free-hand drawn illustration, create with Adobe Illustrator, of me! 
 
-Clone this repository
-In terminal, run `rm -r .git` to remove any commit history from the current repo
-
-Run `git init` to create a new `.git` folder
-
-Run `npm i` to get started, and run `gulp` to start the server!

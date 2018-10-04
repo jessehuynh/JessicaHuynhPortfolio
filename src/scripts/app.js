@@ -38,7 +38,7 @@ app.bagels = () => {
 app.styles = () => {
     // SMOOTH SCROLL 
     $('a').smoothScroll({
-        offset: 50,
+        offset: 5,
     });
     $('.nav__container--sub').hide();
 
