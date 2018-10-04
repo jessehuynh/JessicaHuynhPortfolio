@@ -154,10 +154,10 @@ header {
         width:min-content;
         text-align: right;
         margin:0;
-        padding:0;
+        padding:0 0.75rem;
         // border:1px solid red;
         a {
-            padding:0 0 0 1rem;
+            // padding:0 1rem;
             color:$primary;
             &:hover, &:active {
             border:none;
